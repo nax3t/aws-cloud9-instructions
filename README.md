@@ -1,4 +1,4 @@
-# Getting setup with Cloud9 on Amazon Web Services (AWS)
+# Getting started with Cloud9 on Amazon Web Services (AWS)
 
 - Sign up [here](https://portal.aws.amazon.com/billing/signup#/start)
 - Select **Personal** for account type
