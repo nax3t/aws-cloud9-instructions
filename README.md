@@ -10,8 +10,8 @@
 	- See more details about the free plan [here](https://aws.amazon.com/free/?sc_channel=em&sc_campaign=wlcm&sc_publisher=aws&sc_medium=em_wlcm_1d&sc_detail=wlcm_1d&sc_content=other&sc_country=global&sc_geo=global&sc_category=mult&ref_=pe_1679150_261538020)
 - Sign in to the AWS console with your new account
 	- It can take up to 24 hours for your account to be verified, check your email for notification
-- Once signed in select the **AWS services** search bar and type IAM then select **IAM Manage User Access and Encryption Keys**
-- Select Users > Add User
+- Once signed in select the **AWS services** search bar and type `IAM` then select **IAM Manage User Access and Encryption Keys**
+- Select **Users** > **Add User**
 - name the user **admin**
 - Create a custom password
 - Uncheck option to have user be prompted to reset password on next sign in
