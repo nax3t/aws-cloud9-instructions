@@ -91,7 +91,7 @@ Cat.create({
   _id: 5a2e9d6ce6352614fd77c181 }
 ```
 - Now use `ctrl + c` to exit node and get back to your bash terminal
-- If you want to disable journaling to save disc space then create a file named **mongod.conf** in ~/environment and paste the following code into it:
+- If you want to disable journaling to save disk space then create a file named **mongod.conf** in ~/environment and paste the following code into it:
 
 ```
 # mongod.conf
