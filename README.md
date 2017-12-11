@@ -27,9 +27,14 @@
 - Name is **wdb** and click **Next step**
 - Leave default settings and click **Next step** again
 - Scroll down and click **Create environment**
+
+## Check node and npm
+
 - Once inside your c9 environment (previously called a workspace) type `node -v` into the terminal, you should see v6.11.4 (current version being used at the time of the making of this tutorial)
 - Now type `npm -v`, you should see 3.10.10 (or higher)
-- Now we'll need to install MongoDB
+
+## Install MongoDB
+
 - Enter `touch mongodb-org-3.6.repo` into the terminal
 - Now open the **mongodb-org-3.6.repo** file in your code editor (select it from the left-hand file menu) and paste the following into it then save the file:
 
