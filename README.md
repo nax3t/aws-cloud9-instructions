@@ -33,7 +33,8 @@
 - Once inside your c9 environment (previously called a workspace) type `node -v` into the terminal, you should see v6.11.4 (current version being used at the time of the making of this tutorial)
 - Now type `npm -v`, you should see 3.10.10 (or higher)
 
-## Install MongoDB
+## MongoDB Instructions
+*(skip this section and see below for MySQL Instructions if coming from MySQL course)*
 
 - Enter `touch mongodb-org-3.6.repo` into the terminal
 - Now open the **mongodb-org-3.6.repo** file in your code editor (select it from the left-hand file menu) and paste the following into it then save the file:
@@ -151,3 +152,38 @@ net:
 
 - Now save the file and enter `sudo mv mongod.conf /etc/mongod.conf` in the terminal
 
+## MySQL Instructions
+
+- Enter `sudo service mysqld start` into the terminal
+- Enter `/usr/libexec/mysql55/mysql_secure_installation` and follow the steps for setting up your root account and password.
+	- When prompted for the initial password press enter
+		- If this step fails then enter `/usr/libexec/mysql55/mysqladmin -u root password 'new-password'`
+			- Be sure to replace `'new-password'` with your password
+		- Now start the secure installation over again with `/usr/libexec/mysql55/mysql_secure_installation` and enter the password you just created
+	- Disable remote root access and remove test database and anonymous user during the secure installation steps
+
+- Start the mysql shell with root user access by entering: `mysql -uroot -p` and typing in your root password when prompted
+	- Password will be hidden while typing it in, press enter when done typing and the shell will start if the password is correct
+- Once inside of the shell test it out with the following commands:
+
+
+
+```
+CREATE database test;
+USE test;
+CREATE TABLE pet (name VARCHAR(20), owner VARCHAR(20), species VARCHAR(20));
+INSERT INTO pet (name, owner, species) VALUES('Loki', 'Ian', 'Dog');                                                                                                                                                    
+SELECT * FROM pet;
+```
+
+**Result:**
+
+```
++------+-------+---------+
+| name | owner | species |
++------+-------+---------+
+| Loki | Ian   | Dog     |
++------+-------+---------+
+```
+- When you're done working you can exit the shell by typing `exit` or pressing `ctrl + c`
+- Stop the mysql daemon with `sudo service mysqld stop`
