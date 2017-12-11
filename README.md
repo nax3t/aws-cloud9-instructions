@@ -5,7 +5,7 @@
 - AWS requires a valid phone number for verification
 - Your credit/debit card will also be charged $1 for verification purposes, the amount will be refunded after being processed
 	- See [here](https://aws.amazon.com/premiumsupport/knowledge-center/aws-authorization-charges/) for more information about the charge
-- Select Free Basic Plan
+- Select the *Free* **Basic Plan**
 	- This plan is free for 12 months with certain usage restrictions, set a date in your calender to cancel your plan if you don't want to be charged after one year
 	- See more details about the free plan [here](https://aws.amazon.com/free/?sc_channel=em&sc_campaign=wlcm&sc_publisher=aws&sc_medium=em_wlcm_1d&sc_detail=wlcm_1d&sc_content=other&sc_country=global&sc_geo=global&sc_category=mult&ref_=pe_1679150_261538020)
 - Sign in to the AWS console with your new account
