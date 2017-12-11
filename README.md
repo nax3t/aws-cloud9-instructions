@@ -57,6 +57,7 @@ sudo yum install -y mongodb-org
 ```
 - Close the **mongodb-org-3.6.repo** file and press **Close tab** when prompted
 - Now start the mongo daemon with: `sudo service mongod start`
+	- This will replace the `./mongod` command from before
 - The terminal will return `Starting mongod: [  OK  ]`
 - Now open the shell with: `mongo`
 - When done working exit with `ctrl + d` and stop the service by entering the following into the terminal: `sudo service mongod stop`
