@@ -90,6 +90,7 @@ Cat.create({
 ```
 
 - Save the file, install mongoose with `npm i mongoose` then run it from the terminal with `node cats.js`
+	- *Note: You may need to close the current terminal tab and open a new one before these changes will take place, do this now if running `node cats.js` doesn't return anything* 
 - You should get the following output:
 
 ```
