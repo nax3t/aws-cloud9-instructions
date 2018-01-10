@@ -10,8 +10,8 @@
 	- See more details about the free plan [here](https://aws.amazon.com/free/?sc_channel=em&sc_campaign=wlcm&sc_publisher=aws&sc_medium=em_wlcm_1d&sc_detail=wlcm_1d&sc_content=other&sc_country=global&sc_geo=global&sc_category=mult&ref_=pe_1679150_261538020)
 - Sign in to the AWS console with your new account
 	- It can take up to 24 hours for your account to be verified, check your email for notification
-- Once loggedin you'll be in the AWS dashboard
-- Click the **Cloud9** link otherwise type **cloud9** into the **AWS services** search bar and select **Cloud9 A Cloud IDE for Writing, Running, and Debugging Code**
+- Once logged in you'll be in the AWS dashboard
+- Click the **Cloud9** link, otherwise type **cloud9** into the **AWS services** search bar and select **Cloud9 A Cloud IDE for Writing, Running, and Debugging Code**
 - If your account has been verified then you will be able to select **Create environment**
 - Name it **wdb** and click **Next step**
 - *Leave default settings* and click **Next step** again
