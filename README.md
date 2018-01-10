@@ -10,22 +10,11 @@
 	- See more details about the free plan [here](https://aws.amazon.com/free/?sc_channel=em&sc_campaign=wlcm&sc_publisher=aws&sc_medium=em_wlcm_1d&sc_detail=wlcm_1d&sc_content=other&sc_country=global&sc_geo=global&sc_category=mult&ref_=pe_1679150_261538020)
 - Sign in to the AWS console with your new account
 	- It can take up to 24 hours for your account to be verified, check your email for notification
-- Once signed in select the **AWS services** search bar and type `IAM` then select **IAM Manage User Access and Encryption Keys**
-- Select **Users** > **Add User**
-- name the user **admin**
-- Create a custom password
-- Uncheck option to have user be prompted to reset password on next sign in
-- Click **Next: Permissions**
-- Click **Create group**
-- Name it **wdb** and check **AdministratorAccess** from the top of the list
-- Click **Create group** then scroll down and click **Next: Review**
-- Click **Create user**
-- Click the url that comes after **"Users with AWS Management Console access can sign-in at:"** and bookmark it as **c9 IAM signin**
-- Sign in with your IAM username and password
-- Type **cloud9** into the **AWS services** search bar and select **Cloud9 A Cloud IDE for Writing, Running, and Debugging Code**
+- Once loggedin you'll be in the AWS dashboard
+- Click the **Cloud9** link otherwise type **cloud9** into the **AWS services** search bar and select **Cloud9 A Cloud IDE for Writing, Running, and Debugging Code**
 - If your account has been verified then you will be able to select **Create environment**
-- Name is **wdb** and click **Next step**
-- Leave default settings and click **Next step** again
+- Name it **wdb** and click **Next step**
+- *Leave default settings* and click **Next step** again
 - Scroll down and click **Create environment**
 
 ## Check node and npm
