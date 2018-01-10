@@ -30,7 +30,7 @@
 
 ## Check node and npm
 
-- Once inside your c9 environment (previously called a workspace) type `node -v` into the terminal, you should see v6.11.4 (current version being used at the time of the making of this tutorial)
+- Once inside your c9 environment (previously called a workspace) type `node -v` into the terminal, you should see v6.11.4 or greater (current version being used at the time of the making of this tutorial)
 - Now type `npm -v`, you should see 3.10.10 (or higher)
 
 ## MongoDB Instructions
@@ -50,108 +50,24 @@ gpgkey=https://www.mongodb.org/static/pgp/server-3.6.asc
 
 - Now run the following in your terminal:
 
-
-
 ```
 sudo mv mongodb-org-3.6.repo /etc/yum.repos.d
 sudo yum install -y mongodb-org
 ```
 - Close the **mongodb-org-3.6.repo** file and press **Close tab** when prompted
-- Now start the mongo daemon with: `sudo service mongod start`
-	- This will replace the `./mongod` command from before
-- The terminal will return `Starting mongod: [  OK  ]`
-- Now open the shell with: `mongo`
-- When done working exit with `ctrl + d` and stop the service by entering the following into the terminal: `sudo service mongod stop`
-- Test your install by creating a file in **~/environment** named **cats.js** and pasting the following code into the file:
+- Change directories back into root ~ by entering `cd` into the terminal then enter the following commands:
 
 ```
-var mongoose = require("mongoose");
-mongoose.connect("mongodb://localhost/cat_app", {useMongoClient: true});
-
-var catSchema = new mongoose.Schema({
-   name: String,
-   age: Number,
-   temperament: String
-});
-
-var Cat = mongoose.model("Cat", catSchema);
-
-Cat.create({
-   name: "Snow White",
-   age: 15,
-   temperament: "Bland"
-}, function(err, cat){
-    if(err){
-        console.log(err);
-    } else {
-        console.log(cat);
-    }
-});
+mkdir data
+echo 'mongod --dbpath=data --nojournal' > mongod
+chmod a+x mongod
 ```
 
-- Save the file, install mongoose with `npm i mongoose` then run it from the terminal with `node cats.js`
-	- *Note: You may need to close the current terminal tab and open a new one before these changes will take place, do this now if running `node cats.js` doesn't return anything* 
-- You should get the following output:
+- Now test mongod with `./mongod`
+- Remember, you must first enter `cd` to change directories into root ~ before running `./mongod`
+- Don't forget to shut down ./mongod with `ctrl + c` each time you're done working
 
-```
-{ __v: 0,
-  name: 'Snow White',
-  age: 15,
-  temperament: 'Bland',
-  _id: 5a2e9d6ce6352614fd77c181 }
-```
-- Now use `ctrl + c` to exit node and get back to your bash terminal
-- If you want to disable journaling to save disk space then create a file named **mongod.conf** in ~/environment and paste the following code into it:
-
-```
-# mongod.conf
-
-# for documentation of all options, see:
-#   http://docs.mongodb.org/manual/reference/configuration-options/
-
-# where to write logging data.
-systemLog:
-  destination: file
-  logAppend: true
-  path: /var/log/mongodb/mongod.log
-
-# Where and how to store data.
-storage:
-  dbPath: /var/lib/mongo
-  journal:
-    enabled: false
-#  engine:
-#  mmapv1:
-#  wiredTiger:
-
-# how the process runs
-processManagement:
-  fork: true  # fork and run in background
-  pidFilePath: /var/run/mongodb/mongod.pid  # location of pidfile
-  timeZoneInfo: /usr/share/zoneinfo
-
-# network interfaces
-net:
-  port: 27017
-  bindIp: 127.0.0.1  # Listen to local interface only, comment to listen on all interfaces.
-
-
-#security:
-
-#operationProfiling:
-
-#replication:
-
-#sharding:
-
-## Enterprise-Only Options
-
-#auditLog:
-
-#snmp:
-```
-
-- Now save the file and enter `sudo mv mongod.conf /etc/mongod.conf` in the terminal
+That's it! You're all set :)
 
 ## MySQL Instructions
 
